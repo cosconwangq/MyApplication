@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
-    <Button
-        android:text="我是按钮"
+    android:orientation="vertical"
+    tools:context=".activity.Main2Activity">
+    <ListView
+        android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+    </ListView>
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/ruler_selector"
+            android:text="首页"
+            />
+        <RadioButton style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/printer_selector"
+            android:text="首页"
+            />
+        <RadioButton style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/computer_selector"
+            android:text="首页"
+            />
+        <RadioButton style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/label_selector"
+            android:text="标签"
+            />
+    </RadioGroup>
+</LinearLayout>
